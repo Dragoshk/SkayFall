@@ -1,0 +1,61 @@
+using UnityEngine;
+using System.Collections;
+
+public class EnemyAI : MonoBehaviour
+{
+    
+    public float fpsTargetDistance =0f;
+    public float enemyLookDistance=0f;
+    public float attackDistance=0f;
+    public float enemyMovementSpeed =0f;
+    public float damping=0f;
+    public GameObject fpsTarget;
+    Rigidbody theRigidbody;
+    Renderer myRender;
+     Vector3 posicao;
+
+    public GameObject player;
+
+    void start()
+    {
+     //   myRender = GetComponent<Renderer>();
+        theRigidbody = GetComponent<Rigidbody>();
+    }
+
+
+    void FixedUpdate()
+    {
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        fpsTarget = player;
+        posicao = fpsTarget.transform.position;
+        fpsTargetDistance = Vector3.Distance(fpsTarget.transform.position,fpsTarget.transform.position);
+      
+        if (fpsTargetDistance < enemyLookDistance)
+        {
+            lookAtPlayer();
+        }
+
+        if (fpsTargetDistance < attackDistance)
+        {
+            attackPlease();
+            
+        }
+    }
+    
+    void lookAtPlayer()
+    {
+        Quaternion rotation = Quaternion.LookRotation(fpsTarget.transform.position - transform.position);
+        transform.rotation = Quaternion.Slerp (transform.rotation, rotation,Time.deltaTime*damping);
+    }
+
+
+    void attackPlease()
+    {
+        gameObject.transform.Translate(posicao.x,0,posicao.z);
+        //theRigidbody.AddForce(transform.forward * enemyMovementSpeed);
+       
+    }
+
+
+}

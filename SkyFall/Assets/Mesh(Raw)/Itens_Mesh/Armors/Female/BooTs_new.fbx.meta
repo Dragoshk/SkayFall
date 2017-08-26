@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: 5832aa91231ee79468a767a57b273749
+timeCreated: 1462563583
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Boots_Nova:be_l_Foot01
+    100004: Boots_Nova:be_r_Foot01
+    100006: Boots_Nova:bn_l_01
+    100008: Boots_Nova:bn_l_Foot01
+    100010: Boots_Nova:bn_l_Knee_a01
+    100012: Boots_Nova:bn_l_Knee_b01
+    100014: Boots_Nova:bn_l_Leg01
+    100016: Boots_Nova:bn_r_01
+    100018: Boots_Nova:bn_r_Foot01
+    100020: Boots_Nova:bn_r_Knee_a01
+    100022: Boots_Nova:bn_r_Knee_b01
+    100024: Boots_Nova:bn_r_Leg01
+    100026: Boots_Nova:bn_SpA01
+    100028: Boots_Nova:BRS_GEO
+    100030: Boots_Nova:BRS_Shoes:BRS_Final:polySurface2930
+    100032: Boots_Nova:Joints01
+    100034: Boots_Nova:polySurface2931
+    100036: Boots_Nova:polySurface2937
+    100038: Boots_Nova:WorldControls
+    400000: //RootNode
+    400002: Boots_Nova:be_l_Foot01
+    400004: Boots_Nova:be_r_Foot01
+    400006: Boots_Nova:bn_l_01
+    400008: Boots_Nova:bn_l_Foot01
+    400010: Boots_Nova:bn_l_Knee_a01
+    400012: Boots_Nova:bn_l_Knee_b01
+    400014: Boots_Nova:bn_l_Leg01
+    400016: Boots_Nova:bn_r_01
+    400018: Boots_Nova:bn_r_Foot01
+    400020: Boots_Nova:bn_r_Knee_a01
+    400022: Boots_Nova:bn_r_Knee_b01
+    400024: Boots_Nova:bn_r_Leg01
+    400026: Boots_Nova:bn_SpA01
+    400028: Boots_Nova:BRS_GEO
+    400030: Boots_Nova:BRS_Shoes:BRS_Final:polySurface2930
+    400032: Boots_Nova:Joints01
+    400034: Boots_Nova:polySurface2931
+    400036: Boots_Nova:polySurface2937
+    400038: Boots_Nova:WorldControls
+    4300000: Boots_Nova:polySurface2931
+    4300002: Boots_Nova:polySurface2937
+    9500000: //RootNode
+    13700000: Boots_Nova:polySurface2931
+    13700002: Boots_Nova:polySurface2937
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 15
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

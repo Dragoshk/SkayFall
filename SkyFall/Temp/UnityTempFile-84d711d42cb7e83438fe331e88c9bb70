@@ -1,0 +1,276 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:Library/FacebookSDK/Facebook.Unity.Settings.dll
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/nunit.framework.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll"
+-r:Assets/DLL/I18N.CJK.dll
+-r:Assets/DLL/I18N.dll
+-r:Assets/DLL/I18N.MidEast.dll
+-r:Assets/DLL/I18N.Other.dll
+-r:Assets/DLL/I18N.Rare.dll
+-r:Assets/DLL/I18N.West.dll
+-r:Assets/DLL/MySql.Data.dll
+-r:Assets/DLL/System.Data.dll
+-r:Assets/DLL/System.Drawing.dll
+-r:Assets/Plugins/Photon3Unity3D.dll
+-r:Assets/Plugins/WebSocket/websocket-sharp.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/Mono.Cecil.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/AppleTVSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"C:/Program Files/Unity/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_5_6_1
+-define:UNITY_5_6
+-define:UNITY_5
+-define:UNITY_ANALYTICS
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_RUNTIME_NAVMESH_BUILDING
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_SCRIPTING_NEW_CSHARP_COMPILER
+-define:ENABLE_VIDEO
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VR
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/CustomTypes.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Enums.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Extensions.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/FriendInfo.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/GizmoType.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/LoadbalancingPeer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/NetworkingPeer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonClasses.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonHandler.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonLagSimulationGui.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonNetwork.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonPlayer.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonStatsGui.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonStreamQueue.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/PingCloudRegions.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/RPC.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Room.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/RoomInfo.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/RpcIndexComponent.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/ServerSettings.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/SocketUdp.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/SocketWebTcp.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonAnimatorView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonRigidbody2DView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonRigidbodyView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformView.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewPositionControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewPositionModel.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewRotationControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewRotationModel.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewScaleControl.cs"
+"Assets/Photon Unity Networking/Plugins/PhotonNetwork/Views/PhotonTransformViewScaleModel.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ConnectAndJoinRandom.cs"
+"Assets/Photon Unity Networking/UtilityScripts/CullArea.cs"
+"Assets/Photon Unity Networking/UtilityScripts/HighlightOwnedGameObj.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InRoomChat.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InRoomRoundTimer.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InRoomTime.cs"
+"Assets/Photon Unity Networking/UtilityScripts/InputToEvent.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ManualPhotonViewAllocator.cs"
+"Assets/Photon Unity Networking/UtilityScripts/MoveByKeys.cs"
+"Assets/Photon Unity Networking/UtilityScripts/NetworkCullingHandler.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnAwakeUsePhotonView.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnClickDestroy.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnClickInstantiate.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnClickLoadSomething.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnJoinedInstantiate.cs"
+"Assets/Photon Unity Networking/UtilityScripts/OnStartDelete.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PhotonPlayer/PlayerRoomIndexing.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItem.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItemSimple.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PickupItemSyncer.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PointedAtGameObjectInfo.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunPlayerScores.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunTeams.cs"
+"Assets/Photon Unity Networking/UtilityScripts/PunTurnManager.cs"
+"Assets/Photon Unity Networking/UtilityScripts/QuitOnEscapeOrBack.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ServerTime.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ShowInfoOfPlayer.cs"
+"Assets/Photon Unity Networking/UtilityScripts/ShowStatusWhenConnecting.cs"
+"Assets/Photon Unity Networking/UtilityScripts/SmoothSyncMovement.cs"
+"Assets/Photon Unity Networking/UtilityScripts/SupportLogger.cs"
+"Assets/Photon Unity Networking/UtilityScripts/TimeKeeper.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/ButtonInsideScrollList.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/TextButtonTransition.cs"
+"Assets/Photon Unity Networking/UtilityScripts/UI/TextToggleIsOnTransition.cs"
+Assets/PhotonChatApi/ChatChannel.cs
+Assets/PhotonChatApi/ChatClient.cs
+Assets/PhotonChatApi/ChatDisconnectCause.cs
+Assets/PhotonChatApi/ChatEventCode.cs
+Assets/PhotonChatApi/ChatOperationCode.cs
+Assets/PhotonChatApi/ChatParameterCode.cs
+Assets/PhotonChatApi/ChatPeer.cs
+Assets/PhotonChatApi/ChatState.cs
+Assets/PhotonChatApi/ChatUserStatus.cs
+Assets/PhotonChatApi/IChatClientListener.cs
+Assets/Scripts/Enemy/EnemiesOnScene.cs
+Assets/Scripts/Enemy/EnemyHealth.cs
+Assets/Scripts/Enemy/IA/AI_State.cs
+Assets/Scripts/Enemy/IA/EnemieSigthSphere.cs
+Assets/Scripts/Enemy/IA/EnemiesManager.cs
+Assets/Scripts/Enemy/IA/EnemyAI.cs
+Assets/Scripts/Enemy/IA/EnemyIA.cs
+Assets/Scripts/Enemy/IA/Enemy_Patrol.cs
+Assets/Scripts/Enemy/IA/PointOfInterest.cs
+Assets/Scripts/Enemy/Mob.cs
+Assets/Scripts/GameController/ChangingRoom.cs
+Assets/Scripts/GameController/GameMaster.cs
+Assets/Scripts/GameController/GameSettings.cs
+Assets/Scripts/GameController/GameSettings2.cs
+Assets/Scripts/GameController/Menu.cs
+Assets/Scripts/GameController/SettingManeger.cs
+Assets/Scripts/Interface/HUDScripts/Bars.cs
+Assets/Scripts/Interface/HUDScripts/FloatingText.cs
+Assets/Scripts/Interface/HUDScripts/FloatingTextControler.cs
+Assets/Scripts/Interface/HUDScripts/PlayerPanel.cs
+Assets/Scripts/Interface/HUDScripts/Stats.cs
+Assets/Scripts/Interface/HUDScripts/myGUI.cs
+Assets/Scripts/Interface/HUDScripts/test.cs
+"Assets/Scripts/Interface/MessengerExtended(nao Deletar)/CallBack.cs"
+"Assets/Scripts/Interface/MessengerExtended(nao Deletar)/Messenger.cs"
+Assets/Scripts/Itens/Armor.cs
+Assets/Scripts/Itens/CharacterScript.cs
+Assets/Scripts/Itens/CharacterSlot.cs
+Assets/Scripts/Itens/Inventory.cs
+Assets/Scripts/Itens/Item.cs
+Assets/Scripts/Itens/ItemDatabase.cs
+Assets/Scripts/Itens/SlotScript.cs
+Assets/Scripts/Itens/Weapon.cs
+"Assets/Scripts/NetWork/Character Creation/CharSelectBut.cs"
+"Assets/Scripts/NetWork/Character Creation/DataWorker.cs"
+"Assets/Scripts/NetWork/Character Creation/PlayerCononectMySql.cs"
+"Assets/Scripts/NetWork/Character Creation/PlayerModelCustomization.cs"
+"Assets/Scripts/NetWork/Character Creation/StastButton.cs"
+Assets/Scripts/NetWork/ChatAPI/ChannelSelector.cs
+Assets/Scripts/NetWork/ChatAPI/ChatAppIdCheckerUI.cs
+Assets/Scripts/NetWork/ChatAPI/ChatGui.cs
+Assets/Scripts/NetWork/ChatAPI/FriendItem.cs
+Assets/Scripts/NetWork/ChatAPI/IgnoreUiRaycastWhenInactive.cs
+Assets/Scripts/NetWork/ChatAPI/NamePickGui.cs
+Assets/Scripts/NetWork/LogginSystem.cs
+Assets/Scripts/NetWork/NetworkGame.cs
+Assets/Scripts/NetWork/NetworkLocalController.cs
+Assets/Scripts/PlayerScripts/AinFocus.cs
+Assets/Scripts/PlayerScripts/BillBoard.cs
+Assets/Scripts/PlayerScripts/Cam/CameraController.cs
+Assets/Scripts/PlayerScripts/Cam/FollowCam.cs
+Assets/Scripts/PlayerScripts/Cam/Troca_cam.cs
+Assets/Scripts/PlayerScripts/CharCustomization/CharacterAssets.cs
+Assets/Scripts/PlayerScripts/CharCustomization/Eyes.cs
+Assets/Scripts/PlayerScripts/CharCustomization/Geder_Change.cs
+Assets/Scripts/PlayerScripts/CharCustomization/Hair.cs
+Assets/Scripts/PlayerScripts/CharCustomization/Rotate_Player.cs
+"Assets/Scripts/PlayerScripts/Charater Class/Atributes.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/BaseCharacter.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/BaseStats.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/CharacterGenerator.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/ModifiedStats.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/PlayerCharacter.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/Skills.cs"
+"Assets/Scripts/PlayerScripts/Charater Class/Vital.cs"
+Assets/Scripts/PlayerScripts/CostumeDriver_Chest.cs
+Assets/Scripts/PlayerScripts/CostumeDriver_Hands.cs
+Assets/Scripts/PlayerScripts/CostumeDriver_Shoes.cs
+Assets/Scripts/PlayerScripts/CostumeDriver_legs.cs
+Assets/Scripts/PlayerScripts/InputMenu.cs
+Assets/Scripts/PlayerScripts/LevelSystem.cs
+Assets/Scripts/PlayerScripts/PlayerHUD.cs
+Assets/Scripts/PlayerScripts/Player_Animations.cs
+Assets/Scripts/PlayerScripts/Player_Controler.cs
+Assets/Scripts/PlayerScripts/Player_DriverSystem.cs
+Assets/Scripts/PlayerScripts/Targets.cs
+"Assets/Scripts/ScriptDeCena/Day&Nigth/GameTime.cs"
+"Assets/Scripts/ScriptDeCena/Day&Nigth/Sun.cs"
+"Assets/Scripts/ScriptDeCena/Main Menu/MainMenu.cs"
+"Assets/Scripts/Spell System/Behavior/AOE_Behavior.cs"
+"Assets/Scripts/Spell System/Behavior/Ranged_Behavior.cs"
+"Assets/Scripts/Spell System/CastSpell.cs"
+"Assets/Scripts/Spell System/Movimento.cs"
+"Assets/Scripts/Spell System/SpellCooldown.cs"
+"Assets/Scripts/Spell System/SpellManager.cs"
+"Assets/Scripts/Spell System/Spell_Base.cs"
+"Assets/Scripts/Target System/MouseTargeting.cs"
+"Assets/Scripts/Target System/Targeting.cs"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &183396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 477382}
+  - component: {fileID: 11406262}
+  m_Layer: 0
+  m_Name: PCEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &477382
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.0006248473, y: 1.8389635, z: 0.050861992}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11406262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc7cd52a9586614e8089726794ae57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Weapon_Holder_R: {fileID: 0}
+  Weapon_Holder_L: {fileID: 0}
+  Chest_Holder: {fileID: 0}
+  Leggs_Holder: {fileID: 0}
+  Boots_Holder: {fileID: 0}
+  Hands_Holder: {fileID: 0}
+  HairAnchor: {fileID: 0}
+  EyesAnchor: {fileID: 0}
+  DrwHolder_L: {fileID: 0}
+  DrwHolder_R: {fileID: 0}
+  DrwHolder_BackL: {fileID: 0}
+  DrwHolder_BackR: {fileID: 0}
+  meshToHide1: {fileID: 0}
+  meshToHide2: {fileID: 0}
+  meshToHide3: {fileID: 0}
+  DriverSysten: {fileID: 0}
+  curDmg: 0
+  _charID: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 183396}
+  m_IsPrefabParent: 1

@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &101100000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Low_body
+  m_Mask: 01000000010000000000000001000000010000000000000000000000000000000000000001000000010000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: BRS_GEO
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:body:BRS_Retopology:polySurface2918
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2925
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2926
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2928
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2929
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2930
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Cloths/BRS_Final:polySurface2937
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Eyes
+    m_Weight: 1
+  - m_Path: BRS_GEO/BRS_Final:Eyes/BRS_Final:body:polySurface32
+    m_Weight: 1
+  - m_Path: BRS_GEO/Hair1
+    m_Weight: 1
+  - m_Path: WorldControls
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01/bn_l_Knee_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01/bn_l_Knee_a01/bn_l_Knee_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01/bn_l_Knee_a01/bn_l_Knee_b01/bn_l_01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01/bn_l_Knee_a01/bn_l_Knee_b01/bn_l_01/bn_l_Foot01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_l_Leg01/bn_l_Knee_a01/bn_l_Knee_b01/bn_l_01/bn_l_Foot01/be_l_Foot01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01/bn_r_Knee_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01/bn_r_Knee_a01/bn_r_Knee_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01/bn_r_Knee_a01/bn_r_Knee_b01/bn_r_01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01/bn_r_Knee_a01/bn_r_Knee_b01/bn_r_01/bn_r_Foot01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_r_Leg01/bn_r_Knee_a01/bn_r_Knee_b01/bn_r_01/bn_r_Foot01/be_r_Foot01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/be_Head01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_l_Eye01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_l_Eye01/be_l_Eye01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_l_EyeBrow01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_l_EyeBrow01/be_l_EyeBrow01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_Mouth01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_Mouth01/be_Mouth01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_r_Eye01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_r_Eye01/be_r_Eye01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_r_EyeBrow01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/be_SpE01/bn_Neck01/bn_Head01/bn_r_EyeBrow01/be_r_EyeBrow01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerA01/bn_l_FingerA_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerA01/bn_l_FingerA_a01/bn_l_FingerA_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerA01/bn_l_FingerA_a01/bn_l_FingerA_b01/be_l_FingerA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerB01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerB01/bn_l_FingerB_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerB01/bn_l_FingerB_a01/bn_l_FingerB_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerB01/bn_l_FingerB_a01/bn_l_FingerB_b01/be_l_FingerB01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerC01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerC01/bn_l_FingerC_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerC01/bn_l_FingerC_a01/bn_l_FingerC_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerC01/bn_l_FingerC_a01/bn_l_FingerC_b01/be_l_FingerC01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerD01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerD01/bn_l_FingerD_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerD01/bn_l_FingerD_a01/bn_l_FingerD_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerD01/bn_l_FingerD_a01/bn_l_FingerD_b01/be_l_FingerD01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerE01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerE01/bn_l_FingerE_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerE01/bn_l_FingerE_a01/bn_l_FingerE_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_l_Sholder01/be_l_Sholder01/bn_l_Army01/bn_l_Elbow_a01/bn_l_Elbow_b01/bn_l_Wirst01/bn_l_FingerE01/bn_l_FingerE_a01/bn_l_FingerE_b01/be_l_FingerE01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerA01/bn_r_FingerA_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerA01/bn_r_FingerA_a01/bn_r_FingerA_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerA01/bn_r_FingerA_a01/bn_r_FingerA_b01/be_r_FingerA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerB01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerB01/bn_r_FingerB_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerB01/bn_r_FingerB_a01/bn_r_FingerB_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerB01/bn_r_FingerB_a01/bn_r_FingerB_b01/be_r_FingerB01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerC01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerC01/bn_r_FingerC_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerC01/bn_r_FingerC_a01/bn_r_FingerC_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerC01/bn_r_FingerC_a01/bn_r_FingerC_b01/bb_r_FingerC01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerD01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerD01/bn_r_FingerD_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerD01/bn_r_FingerD_a01/bn_r_FingerD_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerD01/bn_r_FingerD_a01/bn_r_FingerD_b01/be_r_FingerD01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerE01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerE01/bn_r_FingerE_a01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerE01/bn_r_FingerE_a01/bn_r_FingerE_b01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/bn_SpA01/bn_SpB01/bn_SpC01/bn_SpD01/bn_r_Sholder01/be_r_Sholder01/bn_r_Army01/bn_r_Elbow_a01/bn_r_Elbow_b01/bn_r_Wirst01/bn_r_FingerE01/bn_r_FingerE_a01/bn_r_FingerE_b01/be_r_FingerE01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/jntDrv_SpA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/jntDrv_SpA01/grpLocDrv_jntDrv_SpA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/jntDrv_SpA01/grpLocDrv_jntDrv_SpA01/locDrv_jntDrv_SpA01
+    m_Weight: 1
+  - m_Path: WorldControls/Joints01/jntDrv_SpA01/jntDrv_SpB01
+    m_Weight: 1

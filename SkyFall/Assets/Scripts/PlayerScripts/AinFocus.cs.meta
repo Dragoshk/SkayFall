@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9d9a31be9834c9c479efc34035d235f2
+timeCreated: 1440267257
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - target: {fileID: 431420, guid: 385fc16e0e8a376459e08f14b78a6800, type: 2}
+  - Ainfocus: {fileID: 172550, guid: 385fc16e0e8a376459e08f14b78a6800, type: 2}
+  - targett: {fileID: 11445162, guid: 385fc16e0e8a376459e08f14b78a6800, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

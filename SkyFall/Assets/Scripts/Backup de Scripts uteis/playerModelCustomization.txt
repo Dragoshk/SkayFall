@@ -1,0 +1,424 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PlayerModelCustomization : MonoBehaviour
+{
+    #region General Variables
+    [Header("SetUp")]
+    public float x;
+    public float y;
+    public float width;
+    public float height;
+
+    [Header("Proprietis")]
+    public float rotSpeed = 100;
+    public Camera camera;
+    public static GameObject CharacterMesh;
+    public Rect windowRect = new Rect(20, 20, 120, 50);
+    public Rect windowRect2 = new Rect((Screen.width/ 2) + 20, (Screen.height / 2) + 20, 120, 50);//597 3 168 373
+    public Rect windowRect3 = new Rect((Screen.width / 2) + 20, (Screen.height / 2) + 20, 120, 50);
+    public List<GameObject> slots = new List<GameObject>();
+
+    //[Header("UI Proprietis")]
+    //public Image CharacterToSelect;
+    //public GameObject Panell1;
+    #endregion
+
+    #region Private Variables
+    private Hair _hair = new Hair();
+    private Eyes _eyes = new Eyes();
+    private string _tempUser;
+    private string _tempPassword;
+    private string[] tempNames;
+    private int _custon = 0;
+    private int _creat = 1;
+    private int _info = 2;
+    private int _index = 0;
+    private int _gender = 0;
+    private int _charCount;
+    private int _charOwner;
+    private int _charID;
+    private int _charSlot;
+    private int _slotSelect;
+    private int _indexChar;
+    private int _startLvl = 1;
+    private int _currlvl;
+    private bool _resetHair = false;
+    private bool _unsingMaleModel = true;
+    private bool _rotateme = false;
+    private bool _rotClockwise = true;
+    private bool _showPersonalizationWin = false;
+    private bool _showCharactersWindow = true;
+    private bool __charInfo = false;
+    private bool _characterCreated = false;
+    #endregion
+    public static Vector2 _scale = Vector2.one;
+    public static int skinColor = 1;
+    public string _charName;
+    
+    void Start()
+    {
+        if (GameSettings2.maleModels.Length < 1)
+        {
+            Debug.LogWarning("We have no male Models");
+        }
+
+        if (GameSettings2.femaleModels.Length < 1)
+        {
+            Debug.LogWarning("We have no female Models");
+        }
+
+        PlayerCononectMySql.InitateConection();
+        _charCount = PlayerCononectMySql._charCount;
+        _charOwner = PlayerCononectMySql._ownerChar;
+        _charSlot = PlayerCononectMySql._charSlot;
+        tempNames = new string[_charSlot];
+
+        if (PlayerCononectMySql._charName != null)
+        {
+            _charName = PlayerCononectMySql._charName;
+        }
+
+        if (_charCount > 0 && _charCount <= 4)
+        {
+            for (int i = 0; i <= _charCount - 1; i++)
+            {
+                PlayerCononectMySql.LoadMultipleCharacterData(i);
+                _charID = PlayerCononectMySql._charID;
+                _charName = PlayerCononectMySql._charName;
+                _currlvl = PlayerCononectMySql._charLvl;
+                InstantiateAllCharacter(i, _charID, slots[i]);
+            }
+        }
+    }
+
+    void Update()
+    {
+        if (_rotateme)
+        {
+            if (_rotClockwise)
+                transform.Rotate(Vector3.up * Time.deltaTime * rotSpeed);
+            else
+                transform.Rotate(Vector3.down * Time.deltaTime * rotSpeed);
+
+            _rotateme = false;
+        }
+
+        if (CharacterMesh == null)
+            return;
+
+        CharacterMesh.transform.localScale = new Vector3(_scale.x, _scale.y, _scale.x);
+    }
+
+    #region GUI Functions 
+
+    void OnGUI()
+    {
+        if (_showPersonalizationWin)
+            windowRect = GUI.Window(_custon, windowRect, CreatNewCaharacter, "Character Creation", "box");
+
+        if (_showCharactersWindow)
+            windowRect2 = GUI.Window(_creat, windowRect2, SelectCharacterButton, "Characters", "box");
+
+        if (__charInfo)
+            windowRect3 = GUI.Window(_info, windowRect3, CharInfoWindow, "Character Info", "box");
+    }
+
+    public void SelectCharacterButton(int id)
+    {
+        if (GUI.Button(new Rect(x, (Screen.height / 2) + 160, 165, height), "Creat Character") && _charCount <= 4)
+        {
+            //Debug.Log(_charCount + "-" + _charSlot);
+            InstantiateCharacterModel();
+            _showPersonalizationWin = true;
+            _showCharactersWindow = false;
+        }
+
+        for (int i = 0; i <= _charCount - 1; i++)
+        {
+            _charName = slots[i].transform.GetChild(0).gameObject.name;
+
+            if (GUI.Button(new Rect(x, (i * 65) + 25, 165, 60), "Select Character \n Name :" + _charName + "\n Level :" + _currlvl))
+            {
+                //Debug.Log(_charName);
+                _indexChar = i;
+                __charInfo = true;
+                _showCharactersWindow = false;
+                Debug.Log(_indexChar);
+            }
+        }
+    }
+
+    public void CreatNewCaharacter(int id)
+    {
+        LoadBasePreffs();
+        _charName = GUI.TextField(new Rect(100, 137, 120, 25), _charName, 25);
+
+        if (GUI.Button(new Rect(100, 167, 175, 25), "Back To Character Selector"))
+        {
+            //Debug.Log(_charCount + "-" + _charSlot);
+            if (transform.childCount != 0)
+                for (int cnt = 0; cnt < transform.childCount; cnt++)
+                    Destroy(transform.GetChild(cnt).gameObject);
+
+            _showPersonalizationWin = false;
+            _showCharactersWindow = true;
+        }
+
+        if (GUI.Button(new Rect(100, 107, 120, 25), "Creat Character"))
+        {
+            _charID = Random.Range(0, 100);
+
+            bool validi = PlayerCononectMySql.VerifyData(PlayerCononectMySql._connection, _charID, _charName);
+
+            if (!validi)
+            {
+                _charSlot++;
+                _charCount++;
+                Debug.Log(_charCount + "-" + _charSlot);
+                //salva o personagem no banco
+                SaveCreatedNewCharacter();
+
+                //destroi pre personagem criado
+                if (transform.childCount != 0)
+                    for (int cnt = 0; cnt < transform.childCount; cnt++)
+                        Destroy(transform.GetChild(cnt).gameObject);
+
+                _characterCreated = true;
+                Debug.Log("counters" + _charCount + "-" + _charSlot);
+
+                _showCharactersWindow = true;
+                _showPersonalizationWin = false;
+
+                //instancia a lista de personagens
+                CharCreatInstance(_charSlot);
+            }
+            else
+            {
+                _charID = Random.Range(0, 100);
+                _charName = string.Empty;
+            }
+        }
+    }
+
+    public void CharInfoWindow(int id)
+    {
+        string charName = slots[_indexChar].transform.GetChild(0).gameObject.name;
+
+        GUI.Label(new Rect(x,y + 15,width,height),"Name :" + charName);
+
+        if (GUI.Button(new Rect(55, (Screen.height /2) + 160, 165, height),"Back to Character select"))
+        {
+            __charInfo = false;
+            _showCharactersWindow = true;
+        }
+    }
+
+    public void LoadBasePreffs()
+    {
+        if (!_resetHair)
+        {
+            if (_unsingMaleModel)
+            {
+                _hair.LoadInicialHairMale();
+            }
+            else
+            {
+                _hair.LoadInicialHairFemale();
+            }
+            _resetHair = true;
+        }
+
+        if (_unsingMaleModel)
+        {
+            _hair.DisplayMale();
+        }
+        else {
+            _hair.DisplayFemale();
+        }
+
+        _eyes.Display();
+    }
+    #endregion
+
+    #region Creat Character
+    public void OnEnable()
+    {
+        Messenger.AddListener("ToggleGender", OnToggleGender);
+        Messenger<bool>.AddListener("RotatePlayerClockwise", RotatePlayerClockwise);
+    }
+
+    public void OnDisable()
+    {
+        Messenger.RemoveListener("ToggleGender", OnToggleGender);
+        Messenger<bool>.RemoveListener("RotatePlayerClockwise", RotatePlayerClockwise);
+    }
+
+    public void OnToggleGender()
+    {
+        _unsingMaleModel = !_unsingMaleModel;
+        _index = 0;
+        InstantiateCharacterModel();
+    }
+
+    public static void ChangePlayerSkinColor(int color)
+    {
+        skinColor = color;
+    }
+
+    private void InstantiateCharacterModel()
+    {
+        if (transform.childCount != 0)
+            for (int cnt = 0; cnt < transform.childCount; cnt++)
+                Destroy(transform.GetChild(cnt).gameObject);
+
+        if (_unsingMaleModel)
+        {
+            CharacterMesh = Instantiate(Resources.Load(GameSettings2.MALE_MODEL_PATH + GameSettings2.maleModels[_index]),
+                                        transform.position = new Vector3(3.94f, 0.3282194f, 0),
+                                        transform.rotation) as GameObject;
+
+            CharacterMesh.GetComponent<Player_Controler>().enabled = false;
+            CharacterMesh.GetComponentInChildren<Camera>().enabled = false;
+
+            _gender = 0;
+
+            _hair.LoadInicialHairMale();
+            _eyes.LoadInicialEyesMale();
+        }
+        else {
+            CharacterMesh = Instantiate(Resources.Load(GameSettings2.FEMALE_MODEL_PATH + GameSettings2.femaleModels[_index]),
+                                        transform.position = new Vector3(3.94f, 0.3282194f, 0),
+                                        transform.rotation) as GameObject;
+
+            CharacterMesh.GetComponent<Player_Controler>().enabled = false;
+            CharacterMesh.GetComponentInChildren<Camera>().enabled = false;
+
+            _gender = 1;
+            _hair.LoadInicialHairFemale();
+            _eyes.LoadInicialEyesFemale();
+        }
+        CharacterMesh.transform.parent = transform;
+    }
+
+    private void RotatePlayerClockwise(bool clockwise)
+    {
+        _rotateme = true;
+        _rotClockwise = clockwise;
+    }
+
+    private void SaveCreatedNewCharacter()
+    {
+        _charSlot = _charCount - 1;
+        PlayerCononectMySql.SendNewCharacterToBd(PlayerCononectMySql._connection,
+                                                    _charOwner, _charID,_charName, 
+                                                    _startLvl,_charSlot,_gender,
+                                                    _hair.hairMechIndex,
+                                                    _hair.hairColorIndex,
+                                                    _eyes.eyesMechIndex,
+                                                    _eyes.eyesColorIndex);
+
+        PlayerCononectMySql.UpdateOwnerInfo(PlayerCononectMySql._connection, _charCount, _charOwner);
+        Debug.Log("New char created owner has :" + _charCount + "chars and created on slot" + _charSlot);
+    }
+
+    private void CharCreatInstance(int charslot)
+    {
+        if (_characterCreated)
+        {
+            Debug.Log(charslot);
+            PlayerCononectMySql.LoadMultipleCharacterData(charslot);
+            InstantiateAllCharacter(charslot, _charID, slots[charslot]);
+        }
+    }
+
+    public void InstantiateAllCharacter(int slot, int charID, GameObject pos)
+    {
+        if (PlayerCononectMySql._gender == 0)
+        {
+
+            CharacterMesh = Instantiate(Resources.Load(GameSettings2.MALE_MODEL_PATH + GameSettings2.maleModels[_index]),
+                                        transform.position = pos.transform.position,
+                                        transform.rotation) as GameObject;
+
+            CharacterMesh.transform.parent = pos.transform;
+            CharacterMesh.GetComponent<PlayerCharacter>()._charID = charID;
+            CharacterMesh.GetComponent<Player_Controler>().name = _charName;
+            //CharacterMesh.GetComponent<PlayerCharacter>().Level = _currlvl;
+            CharacterMesh.GetComponent<Player_Controler>().enabled = false;
+            CharacterMesh.GetComponentInChildren<Camera>().enabled = false;
+
+            GameObject hairStyle;
+
+            int hairMechIndex = PlayerCononectMySql._hairMesh;
+
+            hairStyle = Instantiate(Resources.Load(GameSettings2.MALE_HAIR_PATH + "Hair" + " " + hairMechIndex),
+                CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform.position,
+                CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform.rotation) as GameObject;
+
+            hairStyle.transform.parent = CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform;
+
+            Texture temp = Resources.Load(GameSettings2.HAIR_TEXURE_PATH + ((HairColorNames)PlayerCononectMySql._hairColor).ToString()) as Texture;
+            CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.GetComponentInChildren<Renderer>().material.mainTexture = temp;
+
+            GameObject eyesStyle;
+            int eyesMechIndex = PlayerCononectMySql._eyesMesh;
+
+            eyesStyle = Instantiate(Resources.Load(GameSettings2.MALE_EYES_PATH + "Eyes" + " " + eyesMechIndex),
+                        CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform.position,
+                        CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform.rotation) as GameObject;
+
+            eyesStyle.transform.parent = CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform;
+            eyesStyle.transform.localPosition = Vector3.zero;
+            eyesStyle.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+            Texture tempeye = Resources.Load(GameSettings2.EYES_TEXURE_PATH + ((EyesColorNames)PlayerCononectMySql._eyesColor).ToString()) as Texture;
+            CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.GetComponentInChildren<Renderer>().material.mainTexture = tempeye;
+        }
+        else
+        {
+            CharacterMesh = Instantiate(Resources.Load(GameSettings2.FEMALE_MODEL_PATH + GameSettings2.femaleModels[_index]),
+                                        transform.position = pos.transform.position,
+                                        transform.rotation) as GameObject;
+
+            CharacterMesh.transform.parent = pos.transform;
+            CharacterMesh.GetComponent<PlayerCharacter>()._charID = charID;
+            CharacterMesh.GetComponent<Player_Controler>().name = _charName;
+            //CharacterMesh.GetComponent<PlayerCharacter>().lvl = _currlvl;
+            CharacterMesh.GetComponent<Player_Controler>().enabled = false;
+            CharacterMesh.GetComponentInChildren<Camera>().enabled = false;
+
+
+            GameObject hairStyle;
+            int hairMechIndex = PlayerCononectMySql._hairMesh;
+
+            hairStyle = Instantiate(Resources.Load(GameSettings2.FEMALE_HAIR_PATH + "Hair" + " " + hairMechIndex),
+                    CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform.position,
+                    CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform.rotation) as GameObject;
+
+            hairStyle.transform.parent = CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.transform;
+
+            Texture temp = Resources.Load(GameSettings2.HAIR_TEXURE_PATH + ((HairColorNames)PlayerCononectMySql._hairColor).ToString()) as Texture;
+            CharacterMesh.GetComponent<PlayerCharacter>().HairAnchor.GetComponentInChildren<Renderer>().material.mainTexture = temp;
+
+            GameObject eyesStyle;
+            int eyesMechIndex = PlayerCononectMySql._eyesMesh;
+
+            eyesStyle = Instantiate(Resources.Load(GameSettings2.FEMALE_EYES_PATH + "Eyes" + " " + eyesMechIndex),
+                        CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform.position,
+                        CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform.rotation) as GameObject;
+
+            eyesStyle.transform.parent = CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.transform;
+            eyesStyle.transform.localPosition = Vector3.zero;
+            eyesStyle.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+            Texture tempeye = Resources.Load(GameSettings2.EYES_TEXURE_PATH + ((EyesColorNames)PlayerCononectMySql._eyesColor).ToString()) as Texture;
+            CharacterMesh.GetComponent<PlayerCharacter>().EyesAnchor.GetComponentInChildren<Renderer>().material.mainTexture = tempeye;
+        }
+    }
+    #endregion
+
+
+}

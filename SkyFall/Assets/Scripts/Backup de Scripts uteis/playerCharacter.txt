@@ -1,0 +1,226 @@
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public class PlayerCharacter : BaseCharacter
+{
+    private List<Item> _invetory = new List<Item>();
+    private static GameObject go;
+    private static GameObject wm_R;
+    private static GameObject wm_L;
+    private static GameObject head;
+    private static PlayerCharacter instance = null;
+    private static int _gender;
+    private Item[] _equipment = new Item[(int)EquipmentSlot.COUNT];
+
+    public static PlayerCharacter Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                _gender = GameSettings2.LoadGender();
+
+                if (_gender == 0)
+                {
+
+
+                    go = Instantiate(Resources.Load(GameSettings2.MALE_MODEL_PATH + GameSettings2.maleModels[0]),
+                                                               GameSettings2.LoadPlayerPosition(),
+                                                               Quaternion.identity) as GameObject;
+
+                    instance = go.GetComponent<PlayerCharacter>();
+
+                    PlayerCharacter temp = go.GetComponent<PlayerCharacter>();
+                    if (temp == null)
+                        Debug.LogError("Player Prefab does not containg a PC script");
+
+                    GameSettings2.LoadAttributes();
+                    GameSettings2.LoadVitals();
+                    GameSettings2.LoadSkills();
+
+                    LoadMaleCharacter();
+                }
+                else
+                {
+                    Debug.Log("Intance a new Character");
+                    go = Instantiate(Resources.Load(GameSettings2.MALE_MODEL_PATH + GameSettings2.femaleModels[0]),
+                                                               GameSettings2.LoadPlayerPosition(),
+                                                               Quaternion.identity) as GameObject;
+
+                    instance = go.GetComponent<PlayerCharacter>();
+
+                    PlayerCharacter temp = go.GetComponent<PlayerCharacter>();
+                    if (temp == null)
+                        Debug.LogError("Player Prefab does not containg a PC script");
+
+                    GameSettings2.LoadAttributes();
+                    GameSettings2.LoadVitals();
+                    GameSettings2.LoadSkills();
+
+                    LoadFemaleCharacter();
+                }
+
+                go.name = "PC";
+                go.tag = "Player";
+            }
+            return instance;
+        }
+    }
+
+    public List<Item> Inventory
+    {
+        get { return _invetory; }
+    }
+
+    //private Item _equipedWeapon;
+#region Equiping weapons and armor
+    public Item EquipedMainHand
+    {
+        get { return _equipment[(int)EquipmentSlot.MainHand]; }
+
+        set
+        {
+            //_equipedWeapon = value;
+            _equipment[(int)EquipmentSlot.MainHand] = value;
+
+            if (wm_R.transform.childCount > 0)
+                Destroy(wm_R.transform.GetChild(0).gameObject);
+
+            //if(_equipedWeapon != null)
+            GameObject mesh = Instantiate(Resources.Load(GameSettings2.MELLE_WEAPON_MESH_PATH + _equipment[(int)EquipmentSlot.MainHand].Name), wm_R.transform.position, wm_R.transform.rotation) as GameObject;
+            mesh.transform.parent = wm_R.transform;
+        }
+    }
+
+    public Item EquipedOffHand
+    {
+        get { return _equipment[(int)EquipmentSlot.OffHand]; }
+
+        set
+        {
+            //_equipedWeapon = value;
+            _equipment[(int)EquipmentSlot.OffHand] = value;
+
+            if (wm_L.transform.childCount > 0)
+                Destroy(wm_L.transform.GetChild(0).gameObject);
+
+            //if(_equipedWeapon != null)
+            GameObject mesh = Instantiate(Resources.Load(GameSettings2.MELLE_SHILD_MESH_PATH + _equipment[(int)EquipmentSlot.OffHand].Name), wm_L.transform.position, wm_L.transform.rotation) as GameObject;
+            mesh.transform.parent = wm_L.transform;
+        }
+    }
+
+    public Item EquipedChest
+    {
+        get { return _equipment[(int)EquipmentSlot.Head]; }
+
+        set
+        {
+            //_equipedWeapon = value;
+            _equipment[(int)EquipmentSlot.Head] = value;
+
+            if (head.transform.childCount > 0)
+                Destroy(head.transform.GetChild(0).gameObject);
+
+            //if(_equipedWeapon != null)
+            GameObject mesh = Instantiate(Resources.Load(GameSettings2.FEMALE_ARMORS_MESH_PATH + _equipment[(int)EquipmentSlot.Head].Name), head.transform.position, head.transform.rotation) as GameObject;
+            mesh.transform.parent = head.transform;
+        }
+    }
+#endregion
+
+#region Unity Functions
+    public new void Awake()
+    {
+        base.Awake();
+        //instance = this;        
+    }
+
+    void UpDate()
+    {
+        Messenger<int, int>.Broadcast("Player health changed", 80, 100);
+    }
+
+    public void Start()
+    {
+        wm_R = Weapon_Holder_R;
+        wm_L = Weapon_Holder_L;
+        head = HairAnchor;
+    }
+#endregion
+
+#region Loading Setting
+    public static void LoadMaleCharacter()
+    {
+        LoadHair();
+        Debug.Log(instance.primaryAttribute[0].AdjustedBaseValue.ToString());
+    }
+
+    public static void LoadFemaleCharacter()
+    {
+        LoadHair();
+        GameSettings2.LoadAttributes();
+        GameSettings2.LoadVitals();
+        GameSettings2.LoadSkills();
+    }
+
+    public static void LoadHair()
+    {
+        //LoadSkinColor();
+        LoadMaleHairMesh();
+        //LoadFemaleHairMesh();
+        LoadHairColor();
+    }
+
+    public static void LoadHairColor()
+    {
+        Texture temp = Resources.Load(GameSettings2.HAIR_TEXURE_PATH + ((HairColorNames)GameSettings2.LoadHairColorMale()).ToString()) as Texture;
+        instance.HairAnchor.GetComponentInChildren<Renderer>().material.mainTexture = temp;
+    }
+
+    public static void LoadMaleHairMesh()
+    {
+        GameObject hairStyle;
+        int hairMechIndex = GameSettings2.LoadHearMeshMale();
+
+        hairStyle = Instantiate(Resources.Load(GameSettings2.MALE_HAIR_PATH + "Hair" + " " + hairMechIndex),
+                    instance.HairAnchor.transform.position,
+                    instance.HairAnchor.transform.rotation) as GameObject;
+
+        hairStyle.transform.parent = instance.HairAnchor.transform;
+        hairStyle.transform.localPosition = Vector3.zero;
+        hairStyle.transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    public static void LoadFemaleHairMesh()
+    {
+        GameObject hairStyle;
+        int hairMechIndex = GameSettings2.LoadHearMeshMale();
+
+        hairStyle = Instantiate(Resources.Load(GameSettings2.FEMALE_HAIR_PATH + "Hair" + " " + hairMechIndex),
+                    instance.HairAnchor.transform.position,
+                    instance.HairAnchor.transform.rotation) as GameObject;
+
+        hairStyle.transform.parent = instance.HairAnchor.transform;
+        hairStyle.transform.localPosition = Vector3.zero;
+        hairStyle.transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    public static void LoadSkinColor() { }
+#endregion
+}
+public enum EquipmentSlot
+{
+    Head,
+    Showders,
+    Chest,
+    Leggs,
+    Feets,
+    Hands,
+    Back,
+    OffHand,
+    MainHand,
+    TowHande,
+    COUNT
+}

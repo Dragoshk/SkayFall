@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 4932d72a65704204ea95357c13b486b1
+timeCreated: 1456254463
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bb_r_FingerC01
+    100002: be_l_FingerA01
+    100004: be_l_FingerB01
+    100006: be_l_FingerC01
+    100008: be_l_FingerD01
+    100010: be_l_FingerE01
+    100012: be_r_FingerA01
+    100014: be_r_FingerB01
+    100016: be_r_FingerD01
+    100018: be_r_FingerE01
+    100020: bn_l_FingerA01
+    100022: bn_l_FingerA_a01
+    100024: bn_l_FingerA_b01
+    100026: bn_l_FingerB01
+    100028: bn_l_FingerB_a01
+    100030: bn_l_FingerB_b01
+    100032: bn_l_FingerC01
+    100034: bn_l_FingerC_a01
+    100036: bn_l_FingerC_b01
+    100038: bn_l_FingerD01
+    100040: bn_l_FingerD_a01
+    100042: bn_l_FingerD_b01
+    100044: bn_l_FingerE01
+    100046: bn_l_FingerE_a01
+    100048: bn_l_FingerE_b01
+    100050: bn_l_Wirst01
+    100052: bn_r_FingerA01
+    100054: bn_r_FingerA_a01
+    100056: bn_r_FingerA_b01
+    100058: bn_r_FingerB01
+    100060: bn_r_FingerB_a01
+    100062: bn_r_FingerB_b01
+    100064: bn_r_FingerC01
+    100066: bn_r_FingerC_a01
+    100068: bn_r_FingerC_b01
+    100070: bn_r_FingerD01
+    100072: bn_r_FingerD_a01
+    100074: bn_r_FingerD_b01
+    100076: bn_r_FingerE01
+    100078: bn_r_FingerE_a01
+    100080: bn_r_FingerE_b01
+    100082: bn_r_Wirst01
+    100084: BRS_Final:Cloths
+    100086: BRS_Final:polySurface2937
+    100088: //RootNode
+    100090: BRS_GEO
+    100092: Joints01
+    100094: transform3
+    100096: transform4
+    100098: WorldControls
+    400000: bb_r_FingerC01
+    400002: be_l_FingerA01
+    400004: be_l_FingerB01
+    400006: be_l_FingerC01
+    400008: be_l_FingerD01
+    400010: be_l_FingerE01
+    400012: be_r_FingerA01
+    400014: be_r_FingerB01
+    400016: be_r_FingerD01
+    400018: be_r_FingerE01
+    400020: bn_l_FingerA01
+    400022: bn_l_FingerA_a01
+    400024: bn_l_FingerA_b01
+    400026: bn_l_FingerB01
+    400028: bn_l_FingerB_a01
+    400030: bn_l_FingerB_b01
+    400032: bn_l_FingerC01
+    400034: bn_l_FingerC_a01
+    400036: bn_l_FingerC_b01
+    400038: bn_l_FingerD01
+    400040: bn_l_FingerD_a01
+    400042: bn_l_FingerD_b01
+    400044: bn_l_FingerE01
+    400046: bn_l_FingerE_a01
+    400048: bn_l_FingerE_b01
+    400050: bn_l_Wirst01
+    400052: bn_r_FingerA01
+    400054: bn_r_FingerA_a01
+    400056: bn_r_FingerA_b01
+    400058: bn_r_FingerB01
+    400060: bn_r_FingerB_a01
+    400062: bn_r_FingerB_b01
+    400064: bn_r_FingerC01
+    400066: bn_r_FingerC_a01
+    400068: bn_r_FingerC_b01
+    400070: bn_r_FingerD01
+    400072: bn_r_FingerD_a01
+    400074: bn_r_FingerD_b01
+    400076: bn_r_FingerE01
+    400078: bn_r_FingerE_a01
+    400080: bn_r_FingerE_b01
+    400082: bn_r_Wirst01
+    400084: BRS_Final:Cloths
+    400086: BRS_Final:polySurface2937
+    400088: //RootNode
+    400090: BRS_GEO
+    400092: Joints01
+    400094: transform3
+    400096: transform4
+    400098: WorldControls
+    4300000: BRS_Final:polySurface2937
+    9500000: //RootNode
+    13700000: BRS_Final:polySurface2937
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 15
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &105378
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 424132}
+  - component: {fileID: 11456428}
+  m_Layer: 0
+  m_Name: Player Customizations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &424132
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105378}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.371, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11456428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a8001544276fe478f75c4de6dddc1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 100
+  cs: []
+  slots: []
+  StatsToAllowcate: []
+  StatsGeneral: []
+  CharSelect: []
+  newName: {fileID: 0}
+  _name: {fileID: 0}
+  lvl: {fileID: 0}
+  pointsLeft: {fileID: 0}
+  mount: {fileID: 0}
+  CreatButton: {fileID: 0}
+  SelectPanel: {fileID: 0}
+  Creatpanel: {fileID: 0}
+  PlayerMenus: {fileID: 0}
+  OverallData: {fileID: 0}
+  StastGeneral: {fileID: 0}
+  StastToAllowcateInCreat: {fileID: 0}
+  StastToAllowcate: {fileID: 0}
+  AreaToGo: {fileID: 0}
+  ArenaPanell: {fileID: 0}
+  BgPanell: {fileID: 0}
+  DW: {fileID: 0}
+  ChatPanel: {fileID: 0}
+  InventoryGrp: {fileID: 0}
+  ConfigurationsPanel: {fileID: 0}
+  changeItens: 0
+  _charName: 
+  database: {fileID: 0}
+  Generalindex: 0
+  GeneralGender: 0
+  chest: 0
+  hands: 0
+  WeaponMain: 0
+  Legs: 0
+  Boots: 0
+  WeaponOff: 0
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 105378}
+  m_IsPrefabParent: 1

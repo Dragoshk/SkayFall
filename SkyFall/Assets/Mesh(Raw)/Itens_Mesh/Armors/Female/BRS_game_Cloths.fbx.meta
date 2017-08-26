@@ -1,0 +1,104 @@
+fileFormatVersion: 2
+guid: 06c9ced07dbccc94186d8f0911cd650b
+timeCreated: 1447599136
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BRS_Game:be_l_Sholder01
+    100002: BRS_Game:be_r_Sholder01
+    100004: BRS_Game:bn_l_Army01
+    100006: BRS_Game:bn_l_Elbow_a01
+    100008: BRS_Game:bn_l_Sholder01
+    100010: BRS_Game:bn_r_Army01
+    100012: BRS_Game:bn_r_Elbow_a01
+    100014: BRS_Game:bn_r_Sholder01
+    100016: BRS_Game:bn_SpD01
+    100018: BRS_Game:BRS_Final:Cloths2
+    100020: BRS_Game:polySurface2924
+    100022: BRS_Game:polySurface2926
+    100024: BRS_Game:WorldControls
+    100026: //RootNode
+    400000: BRS_Game:be_l_Sholder01
+    400002: BRS_Game:be_r_Sholder01
+    400004: BRS_Game:bn_l_Army01
+    400006: BRS_Game:bn_l_Elbow_a01
+    400008: BRS_Game:bn_l_Sholder01
+    400010: BRS_Game:bn_r_Army01
+    400012: BRS_Game:bn_r_Elbow_a01
+    400014: BRS_Game:bn_r_Sholder01
+    400016: BRS_Game:bn_SpD01
+    400018: BRS_Game:BRS_Final:Cloths2
+    400020: BRS_Game:polySurface2924
+    400022: BRS_Game:polySurface2926
+    400024: BRS_Game:WorldControls
+    400026: //RootNode
+    4300000: BRS_Game:polySurface2926
+    4300002: BRS_Game:polySurface2924
+    9500000: //RootNode
+    13700000: BRS_Game:polySurface2924
+    13700002: BRS_Game:polySurface2926
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 16.3999996
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

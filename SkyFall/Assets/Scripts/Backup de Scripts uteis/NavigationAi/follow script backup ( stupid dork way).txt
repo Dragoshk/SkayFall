@@ -1,0 +1,59 @@
+using UnityEngine;
+using System.Collections;
+
+public class EnemyAI : MonoBehaviour {
+
+    public Rigidbody rb;
+    public GameObject player;
+    Vector3 playerpos;
+    Vector3 targetPos;
+    Transform playerLookAt;
+    public float  moveSpeed= 0.1F;
+    private bool inRange = false;
+
+
+	// Update is called once per frame
+	void Update () {
+        rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerLookAt = player.transform;
+
+        if (inRange == true )
+        {
+            followplayer();
+        }
+        
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if ( other.tag == "Player")
+        {
+            Debug.Log("Entrou no trigger");
+            transform.LookAt(playerLookAt);
+            inRange = true;
+            
+
+                    
+            
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Saio do trigger");
+            inRange = false;
+        }
+
+    }
+
+    void followplayer()
+    {
+        gameObject.transform.position += transform.forward * moveSpeed * 1; 
+            //player.transform.position;
+
+    }
+
+}

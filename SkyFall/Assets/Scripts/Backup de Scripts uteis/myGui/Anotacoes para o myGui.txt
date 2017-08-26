@@ -1,0 +1,9 @@
+Script: My gui com erro da transicao do invetario para main hand
+1) sistema logico implementado porem ainda existe erro no instanciamento do Invetario para o slot
+2) Varialvel bolleano bibbidibobiboo controla se o personagem tem arma equipada ou nao
+	2.1) Isso porque nao eh possivel copiar o valor do item do inventario para um variavel
+
+
+Mygui com erro de logica:
+1) invercao do if na linha 166 de != para == no _selectedItem;
+2) de resto funciona
